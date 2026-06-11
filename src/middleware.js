@@ -99,7 +99,17 @@ export const config = {
                 {
                     type: "header",
                     key: "host",
-                    value: "(.+\\.)?img-bnp\\.pages\\.dev"
+                    value: "img-bnp\\.pages\\.dev"
+                }
+            ]
+        },
+        {
+            source: "/:path*",
+            has: [
+                {
+                    type: "header",
+                    key: "host",
+                    value: "(?<subdomain>.+)\\.img-bnp\\.pages\\.dev"
                 }
             ]
         },
